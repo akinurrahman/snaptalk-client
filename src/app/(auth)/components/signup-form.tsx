@@ -19,7 +19,7 @@ export function SignupForm({
   ...props
 }: React.ComponentProps<"div">) {
   const router = useRouter();
-  const form = useForm({
+  const form = useForm<SignUpSchemaType>({
     mode: "onTouched",
     resolver: zodResolver(signupSchema),
     defaultValues: {
